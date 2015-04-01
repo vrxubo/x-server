@@ -1,0 +1,23 @@
+{
+  "name": "w-server",
+  "version": "0.1.0",
+  "description": "前端开发辅助工具",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fe server"
+  ],
+  "dependencies": {
+    "formidable": "1.0.17"
+  },
+  "main": "./lib/index.js",
+  "bin": {
+    "fe-server": "./bin/w-server.js"
+  },
+  "author": "xubo <xb451@163.com>",
+  "bugs": {
+    "email": "xb451@163.com"
+  },
+  "license": "ISC"
+}
