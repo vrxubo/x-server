@@ -75,7 +75,8 @@
          //自定义处理/index请求
         });
         handler.add('/hello', function (req, res) {
-          通过app.query获取传入的参数
+          //自定义处理 /hello请求
+          //通过app.query获取传入的参数
           app.query(req, function (err, data) {
             //回调函数参数第一个为异常对象, 没有异常则为null
             //第二个参数为解析后的请求参数, 是一个json格式的数据
