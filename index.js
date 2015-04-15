@@ -1,7 +1,5 @@
 var server = require('./lib/server/server');
-var resource = require('./lib/resource');
+var query = require('./lib/util/querystring');
 exports.handler = require('./lib/handler');
-exports.types = resource.types;
-exports.start = function() {
-  server.start();
-}
+exports.start = server.start;
+exports.query = query;

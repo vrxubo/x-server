@@ -3,7 +3,7 @@
     "regExp": "^([^\\/]*)(?:\\/revs){1}(.+)(?:_[a-z0-9]{8}){1}(.*)",
     "replace": "$1$2$3"
   },
-  "list":{
+  "list": {
     "*lietou-static.com": {
       "directory": "D:/work/liepin/svn/fe",
       "regExp": "(?:http[s]?:\/\/)?(\\w+)\\.(\\w+)\\.lietou-static\\.com(.*)",
@@ -12,8 +12,12 @@
     "core.pc.lietou-static.com": "D:/work/liepin/svn/fe/core/pc/branches/it_home_20150325",
     "core.h5.lietou-static.com": "D:/work/liepin/svn/fe/core/h5/trunk",
     "i.s.lietou-static.com": "D:/work/liepin/svn/dev19/pics/trunk",
-    "it.pc.lietou-static.com": "D:/work/liepin/svn/fe/dev/it/pc/branches/home_20150401",
-    "it.pc.pages.com":  "D:/work/liepin/svn/fe/dev/it/pc/pagaes",
+    "it.pc.lietou-static.com": "D:/work/liepin/svn/fe/dev/it/pc/trunk",
+    "it.h5.lietou-static.com": "D:/work/liepin/svn/fe/dev/it/h5/branches/resume_20150413",
+    "www.h5.lietou-static.com": "D:/work/liepin/svn/fe/dev/www/h5/branches/salary20150414",
+    "it.pc.pages.com": "D:/work/liepin/svn/fe/dev/it/pc/pagaes",
+    "it.h5.pages.com": "D:/work/liepin/svn/fe/dev/it/h5/pages",
+    "www.h5.pages.com": "D:/work/liepin/svn/fe/dev/www/h5/pages",
     "s.lietou-static.com": "D:/work/liepin/svn/dev19/pics/trunk"
   }
 }

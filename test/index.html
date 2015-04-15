@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input id="btn" type="button" value="submit">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $('#btn').click(function () {
+      $.ajax({
+        url: '/hello',
+        type: 'post',
+        contentType: 'text/json',
+        data: {
+          a: 'a',
+          n: {
+            b: 'b',
+            c: {
+              c: 'da'
+            }
+          }
+        },
+        success: function (data) {
+          $('body').text(data);
+        }
+      });
+    });
+    </script>
+  </body>
+</html>
