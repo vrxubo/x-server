@@ -67,7 +67,6 @@
 ## 自定义服务 ##
 * 如果有需要也可以自定义请求处理,如:
 
-
     //引入x-server
     var app = require('x-server');
     var fs = require('fs');
