@@ -67,23 +67,23 @@
 ## 自定义服务 ##
 * 如果有需要也可以自定义请求处理,如:
 
-    //引入x-server
-    var app = require('x-server');
-    var fs = require('fs');
-    var handler = app.handler;
-    handler.add('/index', function (req, res) {
-     //自定义处理/index请求
-    });
-    handler.add('/hello', function (req, res) {
-      通过app.query获取传入的参数
-      app.query(req, function (err, data) {
-        //回调函数参数第一个为异常对象, 没有异常则为null
-        //第二个参数为解析后的请求参数, 是一个json格式的数据
-        res.writeHead(200, {
-          'Content-Type': 'text/plain'
+        //引入x-server
+        var app = require('x-server');
+        var fs = require('fs');
+        var handler = app.handler;
+        handler.add('/index', function (req, res) {
+         //自定义处理/index请求
         });
-        res.end(JSON.stringify(data));
-      });
-      });
-      //启动服务
-      app.start();
+        handler.add('/hello', function (req, res) {
+          通过app.query获取传入的参数
+          app.query(req, function (err, data) {
+            //回调函数参数第一个为异常对象, 没有异常则为null
+            //第二个参数为解析后的请求参数, 是一个json格式的数据
+            res.writeHead(200, {
+              'Content-Type': 'text/plain'
+            });
+            res.end(JSON.stringify(data));
+          });
+        });
+        //启动服务
+        app.start();
