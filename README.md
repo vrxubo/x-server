@@ -37,6 +37,7 @@
           }
         }
 若请求的url为http://c.pc.lietou-static.com/revs/v1/js/resume_12319023.js
+
         //c.pc.static.com 与*.static.com匹配
         //先进行通用规则转换
         url = "c.pc.static.com/revs/v1/js/resume_12319023.js".replace(/^([^\/]*)(?:\/revs){1}(.+)(?:_[a-z0-9]{8}){1}(.*)/, '$1$2$3');
@@ -67,3 +68,23 @@
 * 如果有需要也可以自定义请求处理,如:
 
 
+    //引入x-server
+    var app = require('x-server');
+    var fs = require('fs');
+    var handler = app.handler;
+    handler.add('/index', function (req, res) {
+     //自定义处理/index请求
+    });
+    handler.add('/hello', function (req, res) {
+      通过app.query获取传入的参数
+      app.query(req, function (err, data) {
+        //回调函数参数第一个为异常对象, 没有异常则为null
+        //第二个参数为解析后的请求参数, 是一个json格式的数据
+        res.writeHead(200, {
+          'Content-Type': 'text/plain'
+        });
+        res.end(JSON.stringify(data));
+      });
+      });
+      //启动服务
+      app.start();
