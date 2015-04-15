@@ -1,15 +1,15 @@
 # x-server
 前端开发辅助工具
 
-##安装##
+## 安装 ##
 > npm install x-server 
 
-##启动##
+## 启动 ##
 > x-server start
 
-##路由规则配置文件
+## 路由规则配置文件 ## 
     ./lib/router/router.json
-###格式###
+### 格式 ###
 * pattern: 通用规则 ; 所有的url都会应用此规则转换 url.replace(regExp, replace) url包含域名
   * regExp : 正则表达式
   * replace: 替换规则
