@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var app = require('../index');
 var cmd = process.argv[2];
 switch (cmd) {
