@@ -1,6 +1,6 @@
 {
   "name": "x-server",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "前端开发辅助工具",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,8 @@
   },
   "main": "./lib/index.js",
   "bin": {
-    "x-server": "./bin/x-server.js"
+    "x-server": "./bin/x-server.js",
+    "xs": "./bin/x-server.js"
   },
   "author": "xubo <xb451@163.com>",
   "bugs": {
