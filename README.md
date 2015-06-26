@@ -2,12 +2,27 @@
 前端开发辅助工具
 
 ## 安装 ##
-> npm install x-server 
+> npm install x-server
 
 ## 启动 ##
 > x-server start
 
-## 路由规则配置文件 ## 
+## 修改配置文件命令 ##
+
+    > x-server fe 你的fe目录路径    // 设置fe目录
+    > x-server p 默认端 如 c.h5     // 设置默认端
+    > x-server  保存配置文件        // 保存
+    > x-server t 分支名|分支编号    // 切换到分支
+    分支编号可以使用x-server ls命令查看
+
+## 查询配置信息的命令
+
+    > x-server fe   //查看fe目录
+    > x-server p    //查看业务端
+    > x-server ls   //查看可配置的分支
+
+
+## 路由规则配置文件 ##
     ./lib/router/router.json
 ### 格式 ###
 * pattern: 通用规则 ; 所有的url都会应用此规则转换 url.replace(regExp, replace) url包含域名
@@ -19,7 +34,7 @@
   * regExp 正则
   * replace 替换规则
   * 也可以直接配置根目录
-  
+
  如下面的配置:
 
         {
@@ -45,23 +60,23 @@
         //url=c.pc.static.com/v1/js/resume.js
         //再执行*static.com的规则转换
         url.replace(/(?:http[s]?:\/\/)?(\w+)\.(\w+)\.static\.com(.*)"/,'/dev/$1/$2/trunk/$3');
-        
+
         //最终生成相对于根目录的文件的绝对路径
         url=/dev/c/pc/trunk/v1/js/resume.js
-        
+
         //文件在本地的真实路径
-        d:/work/fe/dev/c/pc/trunk/v1/js/resume.js 
+        d:/work/fe/dev/c/pc/trunk/v1/js/resume.js
 
  若请求的url为http://core.pc.static.com/revs/v1/js/resume_12319023.js
-       
+
         //core.pc.static.com 优先匹配 "core.pc.static.com"
         //忽略*static.com 仅执行通用规则转换
-        
+
         //最终生成的文件路径为:
         /v1/js/resume.js
-        
-        
-        
+
+
+
 
 
 ## 自定义服务 ##
