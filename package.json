@@ -1,6 +1,6 @@
 {
   "name": "x-server",
-  "version": "0.2.8",
+  "version": "0.3.2",
   "description": "前端开发辅助工具",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,8 @@
     "fe server"
   ],
   "dependencies": {
-    "send": "0.12.2"
+    "send": "^0.12.2",
+    "fsk-argparse": "^1.1.0"
   },
   "main": "./lib/index.js",
   "bin": {

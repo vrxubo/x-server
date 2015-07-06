@@ -9,17 +9,23 @@
 
 ## 修改配置文件命令 ##
 
-    > x-server fe 你的fe目录路径    // 设置fe目录
-    > x-server p 默认端 如 c.h5     // 设置默认端
-    > x-server  保存配置文件        // 保存
-    > x-server t 分支名|分支编号    // 切换到分支
-    分支编号可以使用x-server ls命令查看
+    > x-server -fe 你的fe目录路径     // 设置fe目录
+    > x-server -p  默认端 如 c.h5     // 设置默认端
+    > x-server -b  分支名|分支编号    // 切换到分支
+    > x-server -t  保存配置文件       // 保存
+    分支编号可以使用x-server -b命令查看
+    必须有-t命令才可以会更新配置文件; 没有-t命令 -fe -p 只会被缓存, -b命令没有效果
+    >x-server -p c.h5 -fe c:/work/fe -b 1 -t
+    该命令会将fe目录更新为c:/work/fe
+    将c.h5指向branches目录下的第一个分支
+    并更新配置文件
 
 ## 查询配置信息的命令
 
-    > x-server fe   //查看fe目录
-    > x-server p    //查看业务端
-    > x-server ls   //查看可配置的分支
+    > x-server -fe   //查看fe目录
+    > x-server -p    //查看业务端
+    > x-server -b    //查看可配置的分支
+    > x-server -h    //查看帮助
 
 
 ## 路由规则配置文件 ##
@@ -71,13 +77,8 @@
 
         //core.pc.static.com 优先匹配 "core.pc.static.com"
         //忽略*static.com 仅执行通用规则转换
-
         //最终生成的文件路径为:
         /v1/js/resume.js
-
-
-
-
 
 ## 自定义服务 ##
 * 如果有需要也可以自定义请求处理,如:
