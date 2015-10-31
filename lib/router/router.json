@@ -1,1 +1,32 @@
-{"feDir":"D:/work/liepin/svn/fe","defaultPort":"c.h5","pattern":{"regExp":"^([^\\/]*)(?:\\/revs)(.+)(?:_[a-z0-9]{8})(.*)","replace":"$1$2$3"},"list":{"*lietou-static.com":{"directory":"D:/work/liepin/svn/fe","regExp":"(?:http[s]?://)?(\\w+)\\.(\\w+)\\.lietou-static\\.com(.*)","replace":"/dev/$1/$2/trunk$3"},"*pages.com":{"directory":"D:/work/liepin/svn/fe/dev/","regExp":"(?:http[s]?://)?(\\w+)\\.(\\w+)\\.pages\\.com(.*)","replace":"/$1/$2/pages$3"},"core.pc.lietou-static.com":"D:/work/liepin/svn/fe/core/pc/trunk","core.h5.lietou-static.com":"D:/work/liepin/svn/fe/core/h5/trunk","i.s.lietou-static.com":"D:/work/liepin/svn/dev19/pics/trunk","h5.lietou-static.com":"D:/work/liepin/svn/dev10/trunk","s.lietou-static.com":"D:/work/liepin/svn/dev19/pics/trunk"}}
+{
+  "feDir":"/work/fe/",
+  "defaultPort": "c.pc",
+  "pattern": {
+    "regExp": "^([^\\/]*)(\\/[^\\/]+)*(?:\\/revs)(.+)(?:_[a-z0-9]{8})(.*)",
+    "replace": "$1$2$3$4"
+  },
+  "list": {
+    "*lietou-static.com": {
+      "directory": "/work/fe/",
+      "regExp": "(?:http[s]?:\/\/)?(\\w+)\\.(\\w+)\\.lietou-static\\.com(.*)",
+      "replace": "/dev/$1/$2/trunk$3"
+    },
+    "*pages.com": {
+      "directory": "/work/fe/dev",
+      "regExp": "(?:http[s]?:\/\/)?(\\w+)\\.(\\w+)\\.pages\\.com(.*)",
+      "replace": "/$1/$2/pages$3"
+    },
+    "concat.lietou-static.com": {
+      "directory": "/work/fe/",
+      "regExp": "^(?:(?:http[s]?://)?concat.lietou-static.com)([\\/](?:core|dev\\/[^\\/]+)[\\/](?:pc|h5))?([^\\/]*)(?:\\/revs)?(.+)(?:_[a-z0-9]{8})?(.*)",
+      "replace": "$1/$2trunk$3$4"
+    },
+    "core.pc.lietou-static.com": "/work/fe/core/pc/trunk/",
+    "core.h5.lietou-static.com": "/work/fe/core/h5/trunk/",
+    "core.pc.pages.com": "/work/fe/core/pc/pages/",
+    "core.h5.pages.com": "/work/fe/core/h5/pages/",
+    "i.s.lietou-static.com": "/work/dev19/pics/trunk",
+    "h5.lietou-static.com": "/work/dev10/trunk",
+    "s.lietou-static.com": "/work/dev19/pics/trunk"
+  }
+}
